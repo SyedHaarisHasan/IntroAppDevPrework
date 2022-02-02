@@ -1,7 +1,7 @@
 ## HelloWorld
 
 ### App Description
-`TODO://` Users can click on 4 buttons to change text, text color, background color, and reset everything to default.
+Users can click on 4 buttons to change text, text color, background color, and reset everything to default.
 
 ### App Walk-though
 <img src="https://media.giphy.com/media/bZV1otnWL47RyZrfGr/giphy.gif" width=200><br>
