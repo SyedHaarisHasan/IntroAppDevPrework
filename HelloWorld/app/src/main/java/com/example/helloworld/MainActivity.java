@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        TextView textView = ((TextView) findViewById(R.id.text));
+
         // User can tap a button to change the text color of the label
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,10 +36,23 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.changeTextButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((TextView) findViewById(R.id.text)).setText("Android is Awesome!");
+                ((TextView) findViewById(R.id.text)).setText("Goodbye \uD83D\uDC4B");
             }
         });
 
+        // User can tap on the background view to reset all views to default settings
+        findViewById(R.id.parent).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Reset text
+                textView.setText("Hello from Haaris!");
 
+                // Reset text color
+                textView.setTextColor((getResources().getColor(R.color.black)));
+
+                // Rest bg color
+                findViewById(R.id.parent).setBackgroundColor(getResources().getColor(R.color.light_green));
+            }
+        });
     }
 }
